@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - pip install cfn-lint
+  build:
+    commands:
+      - cfn-lint --template ./template.yaml --regions $AWS_REGION
+      - aws cloudformation validate-template --template-body file://$(pwd)/template.yaml
+artifacts:
+  files:
+    - '*'
