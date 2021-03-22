@@ -8,12 +8,12 @@ execution:
   scenario: Choose Fligth
 scenarios:
   Choose Flight:
-requests:
-   - label: blazedemo
-     method: GET
-   - label: reserve 
-     method: POST 
-     url: http://blazedemo.com/reserve.php
-     body:
-      fromPort: Paris
-      toPort: Buenos Aires
+    requests:
+     - label: blazedemo
+       method: GET
+     - label: reserve 
+       method: POST 
+       url: http://blazedemo.com/reserve.php
+       body:
+        fromPort: Paris
+        toPort: Buenos Aires
